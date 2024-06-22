@@ -20,10 +20,11 @@ defmodule TestPlaygroundWeb.Router do
     get "/", PageController, :home
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", TestPlaygroundWeb do
-  #   pipe_through :api
-  # end
+  # Creates a scope for API version 1
+  scope "/api/v1", TestPlaygroundWeb do
+    pipe_through :api
+    resources "/users", UrlController, except: [:new, :edit] # An example of a resource route for the API
+  end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:test_playground, :dev_routes) do
@@ -40,5 +41,6 @@ defmodule TestPlaygroundWeb.Router do
       live_dashboard "/dashboard", metrics: TestPlaygroundWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
+
   end
 end

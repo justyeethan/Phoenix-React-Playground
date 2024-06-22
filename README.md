@@ -16,12 +16,39 @@ All React components are located in assets/js/components. We are currently using
 
 API routes can be added through controllers in our test_playground_web/controllers directory.
 
+## Adding API Endpoints
+
+With Phoenix, we can easily add API endpoints by creating a new controller. For example, if we wanted to add a new API endpoint for a user, we use the built in generator:
+
+```bash
+mix phx.gen.json Accounts User users name:string email:string
+```
+
+This is just an example of generating a new controller for a User. We can then add the necessary routes in our router.ex file.
+
+router.ex
+```elixir
+scope "/api", TestPlaygroundWeb do
+  pipe_through :api
+
+  resources "/users", UserController, except: [:new, :edit]
+end
+```
+
+You can consult the current implementation in this codebase for /api/users.
+
+This route specifically grabs user data from the database and returns it as JSON. We can also submit data using a post request to this endpoint.
+
+Once we run that bash command, we can run `mix ecto.migrate` to create the database table for our User model.
+
+After that, your api route should be ready to go!
+
 ## Further Tasks:
 
 - [X] Generate a actual landing page
 - [X] Add TailwindCSS for styling
 - [X] Add ShadCN for our component Library
-- [ ] Add useful hooks for fetching data using React Query
+- [X] Add useful hooks for fetching data using React Query
 
 
 ## Learn more

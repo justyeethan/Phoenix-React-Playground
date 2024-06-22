@@ -7,6 +7,7 @@
 	    "@/*": ["./*"],
       "@/components/*": ["./js/src/components/*"],
       "@/lib/*": ["./js/lib/*"],
+      "@/hooks/*": ["./js/src/hooks/*"],
 	  }
 	}
 }
