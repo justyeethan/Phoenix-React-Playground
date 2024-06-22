@@ -18,9 +18,9 @@ API routes can be added through controllers in our test_playground_web/controlle
 
 ## Further Tasks:
 
-- [ ] Generate a actual landing page
-- [ ] Add TailwindCSS for styling
-- [ ] Add ShadCN for our component Library
+- [X] Generate a actual landing page
+- [X] Add TailwindCSS for styling
+- [X] Add ShadCN for our component Library
 - [ ] Add useful hooks for fetching data using React Query
 
 
