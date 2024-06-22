@@ -1,4 +1,4 @@
-# TestPlayground
+# React/Phoenix TestPlayground
 
 To start your Phoenix server:
 
@@ -8,6 +8,20 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
+## Adding Components
+
+All React components are located in assets/js/components. We are currently using Typescript for all React components.
+
+API routes can be added through controllers in our test_playground_web/controllers directory.
+
+## Further Tasks:
+
+- [ ] Generate a actual landing page
+- [ ] Add TailwindCSS for styling
+- [ ] Add ShadCN for our component Library
+- [ ] Add useful hooks for fetching data using React Query
+
 
 ## Learn more
 
