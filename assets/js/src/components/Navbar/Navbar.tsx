@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@lib/utils";
+import { cn } from "@/lib/utils";
 import { Terminal } from "lucide-react"
 import {
   NavigationMenu,
@@ -10,7 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@components/ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 import ComponentLinks from "./links/ComponentMappings";
 
 

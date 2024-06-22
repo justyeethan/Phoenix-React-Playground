@@ -5,8 +5,8 @@
 	  "baseUrl": ".",
 	  "paths": {
 	    "@/*": ["./*"],
-      "@components/*": ["./js/src/components/*"],
-      "@lib/*": ["./js/lib/*"],
+      "@/components/*": ["./js/src/components/*"],
+      "@/lib/*": ["./js/lib/*"],
 	  }
 	}
 }
