@@ -23,10 +23,15 @@ import {LiveSocket} from "phoenix_live_view"
 import React from "react"
 import {createRoot} from "react-dom/client"
 import App from "./src"
+import { ThemeProvider } from "./src/components/ThemeProvider"
 
 const Main = document.getElementById('main') // Grabs root element from home.html.ex
 const root = createRoot(Main);
-root.render(<App />)
+root.render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+)
 
 // Phoenix stuff
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
