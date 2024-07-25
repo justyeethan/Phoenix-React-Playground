@@ -19,7 +19,7 @@ const App = () => {
         <div className="container px-4 md:px-6 text-center md:text-left">
           <div className="max-w-2xl space-y-4 md:space-y-6">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              Unleash Your Digital Potential
+              Phoenix and React.js template
             </h1>
             <p className="text-muted-foreground md:text-xl lg:text-2xl">
               Discover the power of our cutting-edge solutions and transform

@@ -26,6 +26,7 @@ import App from "./src"
 import { ThemeProvider } from "./src/components/ThemeProvider"
 
 const Main = document.getElementById('main') // Grabs root element from home.html.ex
+// Render Elements
 const root = createRoot(Main);
 root.render(
   <ThemeProvider>
