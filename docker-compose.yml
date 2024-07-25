@@ -1,5 +1,15 @@
-version: "3"
+version: "1"
 services:
+  web:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      MIX_ENV: dev
+      DATABASE_URL: ecto://postgres:postgres@postgres/phoenix_dev
+      SECRET_KEY_BASE: 8z33on9olmZmiN7LmC2Aqevn+xyCzeSCqknUh4h9wIj9nTyPiFauy+znPG7Ik23x # Generate with `mix phx.gen.secret`
+    ports:
+      - '4000:4000'
   postgres:
     image: postgres:14.1
     ports:
@@ -7,4 +17,4 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: hello_dev
+      POSTGRES_DB: phoenix_dev
