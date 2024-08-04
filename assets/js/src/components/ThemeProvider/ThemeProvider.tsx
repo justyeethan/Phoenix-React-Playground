@@ -29,7 +29,6 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
   )
-  console.log(theme)
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -67,7 +66,6 @@ export function ThemeProvider({
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
 
-	console.log('beep beep')
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider")
 

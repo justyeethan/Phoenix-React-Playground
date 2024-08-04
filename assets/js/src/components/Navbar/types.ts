@@ -4,5 +4,9 @@ export type NavbarLinksProps = {
   /** Link that the nav bar button links to */
   href: string;
   /** The description */
-  description: string;
+  description?: string;
+  /** Subitems of the link */
+  subItems?: NavbarLinksProps[];
+  /** If the post should be featured */
+  isFeatured?: boolean;
 };
