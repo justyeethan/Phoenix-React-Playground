@@ -23,7 +23,6 @@ export function ModeToggle() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           onClick={() => {
-            console.log("light");
             setTheme("light");
           }}
         >
@@ -31,7 +30,6 @@ export function ModeToggle() {
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => {
-            console.log("dark");
             setTheme("dark");
           }}
         >
