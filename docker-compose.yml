@@ -7,7 +7,7 @@ services:
     environment:
       MIX_ENV: dev
       DATABASE_URL: ecto://postgres:postgres@postgres/phoenix_dev
-      SECRET_KEY_BASE: 8z33on9olmZmiN7LmC2Aqevn+xyCzeSCqknUh4h9wIj9nTyPiFauy+znPG7Ik23x # Generate with `mix phx.gen.secret`
+      SECRET_KEY_BASE: beep-beep # Generate with `mix phx.gen.secret` PS: This is just a throwaway key
     ports:
       - '4000:4000'
   postgres:

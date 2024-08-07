@@ -9,9 +9,7 @@ import {
 import { useTheme } from "@/components/ThemeProvider";
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
-  console.log(theme);
-  console.log("beep");
+  const { setTheme } = useTheme();
 
   return (
     <DropdownMenu>

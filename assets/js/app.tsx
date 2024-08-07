@@ -1,3 +1,7 @@
+/**
+ * The base app.tsx file
+ * TODO: Address issues with type errors with phoenix Socket module.
+ */
 // If you want to use Phoenix channels, run `mix help phx.gen.channel`
 // to get started and then uncomment the line below.
 // import "./user_socket.js"
@@ -18,21 +22,19 @@
 // Include phoenix_html to handle method=PUT/DELETE in forms and buttons.
 import "phoenix_html"
 // Establish Phoenix Socket and LiveView configuration.
+// @ts-expect-error 
 import {Socket} from "phoenix"
+// @ts-expect-error 
 import {LiveSocket} from "phoenix_live_view"
 import React from "react"
 import {createRoot} from "react-dom/client"
 import App from "./src"
-import { ThemeProvider } from "./src/components/ThemeProvider"
 
 const Main = document.getElementById('main') // Grabs root element from home.html.ex
-// Render Elements
+
+// Render React Elements
 const root = createRoot(Main);
-root.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>
-)
+root.render(<App />);
 
 // Phoenix stuff
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
@@ -48,5 +50,6 @@ liveSocket.connect()
 // >> liveSocket.enableDebug()
 // >> liveSocket.enableLatencySim(1000)  // enabled for duration of browser session
 // >> liveSocket.disableLatencySim()
+// @ts-expect-error 
 window.liveSocket = liveSocket
 

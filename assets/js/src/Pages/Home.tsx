@@ -9,17 +9,17 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
-const App = () => {
+const Home = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false)
 
   return (
     <>
       <Navbar />
-      <section className="w-full h-[90vh] flex items-center justify-center bg-[url('/placeholder.svg')] bg-cover bg-center">
+      <section className="w-full h-[90vh] flex items-center justify-center">
         <div className="container px-4 md:px-6 text-center md:text-left">
           <div className="max-w-2xl space-y-4 md:space-y-6">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              Phoenix and React.js template
+              Phoenix and React.js Template
             </h1>
             <p className="text-muted-foreground md:text-xl lg:text-2xl">
               Discover the power of our cutting-edge solutions and transform
@@ -57,4 +57,4 @@ const App = () => {
     </>
   );
 };
-export default App;
+export default Home;

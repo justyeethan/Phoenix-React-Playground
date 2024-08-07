@@ -1,4 +1,9 @@
 defmodule TestPlaygroundWeb.Router do
+  @moduledoc """
+  This holds the router logic for different routes for Phoenix.
+  We want to also hold all the route mappings in React Router if
+  the route can be accessed through the frontend.
+  """
   use TestPlaygroundWeb, :router
 
   pipeline :browser do
@@ -17,7 +22,9 @@ defmodule TestPlaygroundWeb.Router do
   scope "/", TestPlaygroundWeb do
     pipe_through :browser
 
+    # Frontend Page routes
     get "/", PageController, :home
+    get "/getting-started", PageController, :home
   end
 
   # Creates a scope for API version 1
