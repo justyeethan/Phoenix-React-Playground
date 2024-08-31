@@ -70,6 +70,9 @@ After that, your api route should be ready to go!
 
 ## Further Tasks:
 
+- [ ] Add example authentication
+- [ ] Create a user registration page
+- [ ] Write better tests
 - [X] Generate a actual landing page
 - [X] Add TailwindCSS for styling
 - [X] Add ShadCN for our component Library
