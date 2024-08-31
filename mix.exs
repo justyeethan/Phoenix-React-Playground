@@ -1,9 +1,9 @@
-defmodule TestPlayground.MixProject do
+defmodule PhoenixExample.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :test_playground,
+      app: :phoenix_example,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule TestPlayground.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {TestPlayground.Application, []},
+      mod: {PhoenixExample.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -39,6 +39,7 @@ defmodule TestPlayground.MixProject do
       {:phoenix_html, "~> 4.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.20.2"},
+      {:rename, "~> 0.1.0", only: :dev},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
@@ -74,10 +75,10 @@ defmodule TestPlayground.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["tailwind test_playground", "esbuild test_playground"],
+      "assets.build": ["tailwind phoenix_example", "esbuild phoenix_example"],
       "assets.deploy": [
-        "tailwind test_playground --minify",
-        "esbuild test_playground --minify",
+        "tailwind phoenix_example --minify",
+        "esbuild phoenix_example --minify",
         "phx.digest"
       ]
     ]

@@ -1,4 +1,4 @@
-# React/Phoenix TestPlayground
+# React/Phoenix PhoenixExample
 
 To start your Phoenix server:
 
@@ -10,11 +10,25 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
+## Renaming Phoenix App
+
+We are using the incredibly useful rename functionality provided by [MainShayne233's Rename package](https://github.com/MainShayne233/rename). To rename, simply run the following command:
+
+```bash
+mix rename <OldAppName> <NewAppName> <old_app_name> <new_app_name>
+```
+
+Make sure you are following the conventions of the app, where OldAppName and NewAppName are in PascalCase, and the old_app_name and new_app_name are in snake_case.
+
+### For users with Databases
+
+Don't forget to migrate all of your tables and schemas using `mix ecto.migrate` after renaming your app.
+
 ## Adding Components
 
 All React components are located in assets/js/components. We are currently using Typescript for all React components.
 
-API routes can be added through controllers in our test_playground_web/controllers directory.
+API routes can be added through controllers in our phoenix_example_web/controllers directory.
 
 ## Adding API Endpoints
 
@@ -28,7 +42,7 @@ This is just an example of generating a new controller for a User. We can then a
 
 router.ex
 ```elixir
-scope "/api", TestPlaygroundWeb do
+scope "/api", PhoenixExampleWeb do
   pipe_through :api
 
   resources "/users", UserController, except: [:new, :edit]
