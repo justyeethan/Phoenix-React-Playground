@@ -1,5 +1,18 @@
 # React/Phoenix PhoenixExample
 
+A boilerplate for a React/Phoenix application. This boilerplate is a fullstack application that uses Phoenix as the backend and React as the frontend. We are using Typescript for all React components.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Renaming Your App](#renaming-your-app)
+- [Adding Components](#adding-components)
+- [Adding API Endpoints](#adding-api-endpoints)
+- [Further Tasks:](#further-tasks)
+- [Learn more](#learn-more)
+
+## Getting Started
+
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
@@ -8,19 +21,17 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+Ready to run in production? Please [check Phoenix's deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-## Renaming Phoenix App
+## Renaming Your App
 
-We are using the incredibly useful rename functionality provided by [MainShayne233's Rename package](https://github.com/MainShayne233/rename). To rename, simply run the following command:
+Since you probably don't want to keep the name of this project as TestPlayground, we are using the incredibly useful rename functionality provided by [MainShayne233's Rename package](https://github.com/MainShayne233/rename). To rename, simply run the following command:
 
 ```bash
 mix rename <OldAppName> <NewAppName> <old_app_name> <new_app_name>
 ```
 
 Make sure you are following the conventions of the app, where OldAppName and NewAppName are in PascalCase, and the old_app_name and new_app_name are in snake_case.
-
-### For users with Databases
 
 Don't forget to migrate all of your tables and schemas using `mix ecto.migrate` after renaming your app.
 
