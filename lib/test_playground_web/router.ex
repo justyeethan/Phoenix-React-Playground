@@ -30,7 +30,8 @@ defmodule TestPlaygroundWeb.Router do
   # Creates a scope for API version 1
   scope "/api/v1", TestPlaygroundWeb do
     pipe_through :api
-    resources "/users", UrlController, except: [:new, :edit] # An example of a resource route for the API
+    # An example of a resource route for the API
+    resources "/users", UrlController, except: [:new, :edit]
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
@@ -48,6 +49,5 @@ defmodule TestPlaygroundWeb.Router do
       live_dashboard "/dashboard", metrics: TestPlaygroundWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
-
   end
 end
