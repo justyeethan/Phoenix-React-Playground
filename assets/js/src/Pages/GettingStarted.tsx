@@ -54,7 +54,10 @@ export default function GettingStarted() {
           </Typography>
           <Typography variant="p" className="mt-4 text-muted-foreground">
             The router.ex is also where you determine the permissions needed
-            to access those pages.
+            to access those pages. Permissions are still on the todo list, but 
+            we will be planning on scoping out permissions using Bodyguard.
+            When we do add permission scopes to the route, we will be adding an
+            admin user for you all to play around with it.
           </Typography>
         </div>
       </div>
