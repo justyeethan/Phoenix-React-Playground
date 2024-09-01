@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :test_playground, TestPlayground.Repo,
+config :phoenix_example, PhoenixExample.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "test_playground_dev",
+  database: "phoenix_example_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,7 +16,7 @@ config :test_playground, TestPlayground.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
-config :test_playground, TestPlaygroundWeb.Endpoint,
+config :phoenix_example, PhoenixExampleWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -25,8 +25,8 @@ config :test_playground, TestPlaygroundWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "21O7khttGeASl9vY1+YAj6O5lwYjWdnTLB+xrOHALkGGHwykxlBNpy3CN51WX/y2",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:test_playground, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:test_playground, ~w(--watch)]}
+    esbuild: {Esbuild, :install_and_run, [:phoenix_example, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:phoenix_example, ~w(--watch)]}
   ]
 
 # ## SSL Support
@@ -53,17 +53,17 @@ config :test_playground, TestPlaygroundWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :test_playground, TestPlaygroundWeb.Endpoint,
+config :phoenix_example, PhoenixExampleWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/test_playground_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/phoenix_example_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :test_playground, dev_routes: true
+config :phoenix_example, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

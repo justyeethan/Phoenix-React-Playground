@@ -1,7 +1,7 @@
-defmodule TestPlayground.UrlsFixtures do
+defmodule PhoenixExample.UrlsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `TestPlayground.Urls` context.
+  entities via the `PhoenixExample.Urls` context.
   """
 
   @doc """
@@ -16,7 +16,7 @@ defmodule TestPlayground.UrlsFixtures do
         username: "some username",
         website: "some website"
       })
-      |> TestPlayground.Urls.create_url()
+      |> PhoenixExample.Urls.create_url()
 
     url
   end
