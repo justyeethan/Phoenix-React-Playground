@@ -1,4 +1,4 @@
-defmodule TestPlayground.Repo.Migrations.CreateUsers do
+defmodule PhoenixExample.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do
