@@ -19,19 +19,18 @@ defmodule PhoenixExampleWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", PhoenixExampleWeb do
-    pipe_through :browser
-
-    # Frontend Page routes
-    get "/", PageController, :home
-    get "/getting-started", PageController, :home
-  end
-
   # Creates a scope for API version 1
   scope "/api/v1", PhoenixExampleWeb do
     pipe_through :api
     # An example of a resource route for the API
     resources "/users", UrlController, except: [:new, :edit]
+  end
+
+  scope "/", PhoenixExampleWeb do
+    pipe_through :browser
+
+    # Frontend Page routes
+    get "/*path", PageController, :home
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
